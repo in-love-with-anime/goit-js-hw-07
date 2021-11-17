@@ -50,6 +50,7 @@ const onOpenModal = img => {
 //  Дополнительно. Добавление закрытия модального окна по нажатию клавиши `Escape`.
 
 const onKeyPress = event => {
-    if (event.code === "Escape") modalImage.close();
+    event.code === "Escape"?.(modalImage.close());
+    
     document.removeEventListener("keyup", onKeyPress);
 };
